@@ -1,0 +1,82 @@
+// Variáveis de cor
+$cor-normal: #4caf50;
+$cor-alerta-temperatura: #ff5722;
+$cor-alerta-umidade: #ff9800;
+$cor-em-transito: #2196f3;
+$cor-parado: #757575;
+$primary-color: #007BFF;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$font-color: #343a40;
+
+// Estilos globais
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// Header
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+// Navbar
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #444;
+}
+
+nav ul li {
+  color: #fff;
+  padding: 1rem;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    color: $font-color;
+}
+  
+  .header, .footer {
+    background-color: $primary-color;
+    color: white;
+}
+  
+  .navbar {
+    background-color: $secondary-color;
+    padding: 1rem;
+}
+// Rotas
+.rota {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.rota.em-transito {
+  background-color: $cor-em-transito;
+  color: #fff;
+}
+
+.rota.parado {
+  background-color: $cor-parado;
+  color: #fff;
+}
+
+.rota.alerta-de-temperatura {
+  background-color: $cor-alerta-temperatura;
+  color: #fff;
+}
+
+.rota.alerta-de-umidade {
+  background-color: $cor-alerta-umidade;
+  color: #fff;
+}

@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Sidebar from '../src/components/SideBar.jsx'; 
+import { CssBaseline, AppBar, Toolbar, Typography, Box } from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      
+      {/* Sidebar */}
+      <Sidebar />
+
+      <Box
+        component="main"
+        sx={{ flexGrow: 1, bgcolor: '#f4f4f4', padding: 3 }}
+      >
+        {/* Aqui vem o conteúdo principal do seu app */}
+        <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+          <Toolbar>
+            <Typography variant="h6" noWrap>
+              Meu Web App
+            </Typography>
+          </Toolbar>
+        </AppBar>
+
+        <Toolbar /> {/* Para dar espaço ao AppBar */}
+        <div>
+          <h1>Conteúdo Principal</h1>
+        </div>
+      </Box>
+    </Box>
   );
 }
 
